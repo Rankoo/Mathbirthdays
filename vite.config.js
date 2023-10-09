@@ -5,11 +5,11 @@ import preact from '@preact/preset-vite'
 export default defineConfig(({ command }) => {
   const config = {
     plugins: [preact()],
-    base: '/mathbirthdays/'
+    base: '/'
   }
 
   if (command !== 'serve') {
-    config.base = '/react-vite-gh-pages/'
+    config.base = '/mathbirthdays/'
   }
 
   return config

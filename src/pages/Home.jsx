@@ -39,7 +39,7 @@ export default function Home () {
   }
 
   return (
-    <section className={`min-h-screen p-y-5 max-w-[80%] flex flex-col ${result ? 'justify-around' : 'justify-start'} items-center`}>
+    <section className={`min-h-screen p-y-5 max-w-full flex flex-col ${result ? 'justify-around' : 'justify-start'} items-center`}>
       <AnimatePresence>
         {!result
           ? (
@@ -53,7 +53,7 @@ export default function Home () {
               <motion.form
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                 onSubmit={handleSubmit}
-                className={`flex flex-col items-center justify-between ${!result && 'grow pb-20'} w-full sm:w-auto`}
+                className={`flex flex-col items-center justify-between ${!result && 'grow pb-20'} w-[80%] sm:w-auto`}
               >
                 <div className='flex flex-col w-full ju'>
                   <label for='datepicker' className='font-normal'>Choose your birthdate</label>
@@ -87,7 +87,7 @@ export default function Home () {
                 className=' py-8 px-2 rounded-lg border shadow-md bg-gray-800 border-gray-700 flex flex-col sm:p-10 sm:max-w-[80%]'
               >
                 <header>
-                  <h2 className='font-bold text-2xl text-white text-center'>Your next mathbirthday is...</h2>
+                  <h2 className='font-bold text-2xl text-white text-center px-2'>Your next mathbirthday is...</h2>
                   <p className='text-white pt-4 text-center'>{result.date}</p>
                   <p className='text-9xl text-white pt-4 text-center'>{result.number}</p>
                   <p className='text-2xl text-white text-center'>Year{result.number > 1 && 's'}</p>

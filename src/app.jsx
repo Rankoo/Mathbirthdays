@@ -1,14 +1,14 @@
-import { Route, Switch } from 'wouter'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
 export function App () {
   return (
-    <>
-      <Switch>
-        <Route path='/' component={Home} />
-        <Route component={NotFound} />
-      </Switch>
-    </>
+    <div className='App'>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/*' element={<NotFound />} />
+      </Routes>
+    </div>
   )
 }
