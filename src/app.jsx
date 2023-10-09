@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
-export default function App () {
+const App = () => {
   return (
     <div className='App'>
       <Routes>
@@ -12,3 +12,5 @@ export default function App () {
     </div>
   )
 }
+
+export default App
