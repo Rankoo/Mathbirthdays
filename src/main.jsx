@@ -1,9 +1,10 @@
-import { render } from 'preact'
-import { App } from './app.jsx'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-render(
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename='/mathbirthdays/'>
     <App />
   </BrowserRouter>,
-  document.getElementById('app'))
+)

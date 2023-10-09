@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks'
+import { useState } from 'react'
 import { DateTime, Interval } from 'luxon'
 import { YEARS } from '../resources/constants'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -56,7 +56,7 @@ export default function Home () {
                 className={`flex flex-col items-center justify-between ${!result && 'grow pb-20'} w-[80%] sm:w-auto`}
               >
                 <div className='flex flex-col w-full ju'>
-                  <label for='datepicker' className='font-normal'>Choose your birthdate</label>
+                  <label htmlFor='datepicker' className='font-normal'>Choose your birthdate</label>
                   <motion.input
                     className='font-medium sm:w-80 w-full rounded border-white border-2 p-4 text-3xl sm:text-xl hover:scale-110 duration-300 hover:duration-300'
                     type='date'
